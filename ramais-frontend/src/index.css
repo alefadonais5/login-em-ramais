@@ -1,0 +1,150 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  padding: 1rem;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  margin-top: 2em;
+  font-size: 1.5em;
+}
+
+input {
+  padding: 0.6em 1em;
+  margin: 0.5em 0.5em 1em 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: calc(100% - 2em);
+  max-width: 300px;
+  font-size: 1em;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  margin: 0.3em;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+table {
+  width: 100%;
+  margin-top: 1em;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 0.75em;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #333;
+  color: #fff;
+}
+
+td {
+  background-color: #444;
+  color: #fff;
+}
+
+.message {
+  margin-top: 1em;
+  padding: 1em;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.success {
+  background-color: #2d7a2d;
+  color: #fff;
+}
+
+.error {
+  background-color: #a72727;
+  color: #fff;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+  th {
+    background-color: #f0f0f0;
+    color: #000;
+  }
+  td {
+    background-color: #fff;
+    color: #000;
+  }
+  .success {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  .error {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+}
+.logout-button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.logout-icon {
+  color: red;
+  font-size: 16px;
+  transition: transform 0.5s ease;
+}
+
+.logout-button:hover .logout-icon {
+  transform: scale(1.8);
+}
