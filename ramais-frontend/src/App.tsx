@@ -34,7 +34,7 @@ function App() {
       });
   }, []);
 
-  // Ajustado: Busca o primeiro ramal disponível que não está em uso
+  // Busca o primeiro ramal disponível que não está em uso
   const fetchAvailableExtension = () => {
     setLoading(true);
     setMessage(null); // Limpa qualquer mensagem anterior
