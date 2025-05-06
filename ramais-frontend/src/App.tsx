@@ -10,20 +10,20 @@ interface Extension {
 }
 
 function App() {
-  const [availableExtension, setAvailableExtension] = useState<string | null>(null); // Estado para o ramal disponível
-  const [extensionsInUse, setExtensionsInUse] = useState<Extension[]>([]); // Estado para os ramais em uso
-  const [extensionNumber, setExtensionNumber] = useState(""); // Número do ramal selecionado
-  const [username, setUsername] = useState(""); // Nome do usuário para login/logout
-  const [loading, setLoading] = useState(false); // Estado de carregamento
-  const [message, setMessage] = useState<string | null>(null); // Mensagem a ser exibida
-  const [shouldUpdateExtensions, setShouldUpdateExtensions] = useState(false); // Estado para controlar a atualização da lista de ramais
+  const [availableExtension, setAvailableExtension] = useState<string | null>(null);
+  const [extensionsInUse, setExtensionsInUse] = useState<Extension[]>([]); 
+  const [extensionNumber, setExtensionNumber] = useState(""); 
+  const [username, setUsername] = useState(""); 
+  const [loading, setLoading] = useState(false); 
+  const [message, setMessage] = useState<string | null>(null);
+  const [shouldUpdateExtensions, setShouldUpdateExtensions] = useState(false); 
 
-  // Carrega os ramais em uso ao montar o componente
+  // Carrega os ramais em uso
   useEffect(() => {
     getExtensionsInUse()
       .then((response) => {
         if (Array.isArray(response)) {
-          setExtensionsInUse(response); // Tipagem explícita da resposta
+          setExtensionsInUse(response);
         } else {
           setMessage("Erro ao buscar ramais em uso");
         }
@@ -37,12 +37,12 @@ function App() {
   // Busca o primeiro ramal disponível que não está em uso
   const fetchAvailableExtension = () => {
     setLoading(true);
-    setMessage(null); // Limpa qualquer mensagem anterior
+    setMessage(null); 
 
     getAvailableExtension()
       .then((response) => {
         if (Array.isArray(response) && response.length > 0) {
-          // Filtra os ramais disponíveis que não estão em uso
+          
           const available = response.find(
             (ext) => !extensionsInUse.some((inUse) => inUse.extensionNumber === ext.extensionNumber)
           );
@@ -75,7 +75,7 @@ function App() {
     if (isExtensionInUse) {
       setMessage("Este ramal já está em uso.");
       setAvailableExtension(null); // Limpa a mensagem de ramal disponível
-      return; // Impede o login
+      return; 
     }
 
     loginToExtension(extensionNumber, username)
@@ -112,7 +112,7 @@ function App() {
       });
   };
 
-  // Atualiza a lista de ramais em uso quando o estado 'shouldUpdateExtensions' for alterado
+  
   useEffect(() => {
     if (shouldUpdateExtensions) {
       // Atualiza a lista de ramais em uso após o logout
@@ -120,7 +120,7 @@ function App() {
         .then((response) => {
           if (Array.isArray(response)) {
             setExtensionsInUse(response);
-            setShouldUpdateExtensions(false); // Reseta o estado após a atualização
+            setShouldUpdateExtensions(false); 
           } else {
             setMessage("Erro ao buscar ramais em uso após logout");
           }
@@ -130,7 +130,7 @@ function App() {
           setMessage("Erro ao atualizar ramais em uso");
         });
     }
-  }, [shouldUpdateExtensions]); // O useEffect será chamado sempre que o estado for alterado
+  }, [shouldUpdateExtensions]); 
 
   return (
     <div className="container">
