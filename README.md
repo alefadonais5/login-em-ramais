@@ -1,7 +1,7 @@
 
 # Login em Ramais
 
-Este projeto tem como objetivo fornecer um sistema de autenticação e gerenciamento de ramais, com frontend e backend separados. Pode ser utilizado em ambientes corporativos para facilitar o controle de usuários e ramais telefônicos.
+Este projeto tem como objetivo fornecer um sistema de autenticação e gerenciamento de ramais, com frontend e backend. Pode ser utilizado em ambientes corporativos para facilitar o controle de usuários e ramais telefônicos.
 
 ## 📁 Estrutura do Projeto
 
