@@ -20,7 +20,7 @@ public class ExtensionsService {
         return extensionsRepository.findByInUseFalse();  // Verifica apenas se o ramal não está em uso
     }
 
-    // ✅ Primeiro ramal disponível corretamente
+    // Primeiro ramal disponível corretamente
     public Optional<Extensions> findFirstAvailableExtension() {
         return extensionsRepository.findByInUseFalseAndLoggedUserIsNull().stream().findFirst();
     }
@@ -59,7 +59,7 @@ public class ExtensionsService {
         }
     }
 
-    // ✅ Logout que libera o ramal corretamente
+    // Logout que libera o ramal corretamente
     @Transactional
     public boolean logoutFromExtension(Short extensionNumber) {
         Extensions extension = extensionsRepository.findByExtensionNumber(extensionNumber);
