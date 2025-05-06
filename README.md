@@ -9,7 +9,7 @@ Este projeto tem como objetivo fornecer um sistema de autenticação e gerenciam
 - `ramais-frontend/` — Frontend do sistema, construído com React e TypeScript.
 - `scripts/` — Contém o script SQL para criação das tabelas e estrutura do banco de dados MySQL.
 
----
+
 
 ## 🚀 Tecnologias Utilizadas
 
@@ -24,9 +24,9 @@ Este projeto tem como objetivo fornecer um sistema de autenticação e gerenciam
 - React
 - TypeScript
 - Axios
-- CSS / Styled Components
+- CSS 
 
----
+
 
 ## 🔧 Como Rodar o Projeto
 
@@ -42,7 +42,7 @@ Este projeto tem como objetivo fornecer um sistema de autenticação e gerenciam
 2. Importe o script SQL localizado em `scripts/banco.sql` (ou nome equivalente):
    ```bash
    mysql -u seu_usuario -p ramais_db < scripts/banco.sql
-````
+
 
 3. Edite o arquivo `application.properties` no backend:
 
@@ -69,7 +69,7 @@ npm run dev
 
 O frontend será iniciado em `http://localhost:5173`.
 
----
+
 
 ## 📌 Funcionalidades
 
@@ -79,7 +79,6 @@ O frontend será iniciado em `http://localhost:5173`.
 * Integração com banco MySQL
 * Validação e tratamento de erros
 
----
 
 ## 🛠️ Scripts
 
@@ -89,7 +88,6 @@ A pasta `scripts/` contém o script SQL necessário para a criação da base de 
 * Relacionamentos
 * Inserts iniciais (se houver)
 
----
 
 ## 🤝 Contribuição
 
@@ -99,17 +97,15 @@ A pasta `scripts/` contém o script SQL necessário para a criação da base de 
 4. Push na sua branch: `git push origin minha-feature`
 5. Abra um Pull Request
 
----
 
 ## 📄 Licença
 
 Este projeto está licenciado sob a [MIT License](LICENSE).
 
----
 
 ## 👤 Autor
 
 * [@alefadonais5](https://github.com/alefadonais5)
 
-```
+
 
