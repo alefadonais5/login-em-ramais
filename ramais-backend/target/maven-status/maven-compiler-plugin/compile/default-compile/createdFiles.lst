@@ -1,0 +1,7 @@
+com\midiavox\ramais\Config\CorsConfig$1.class
+com\midiavox\ramais\Repository\ExtensionsRepository.class
+com\midiavox\ramais\Config\CorsConfig.class
+com\midiavox\ramais\Controller\ExtensionsController.class
+com\midiavox\ramais\Model\Extensions.class
+com\midiavox\ramais\RamaisApplication.class
+com\midiavox\ramais\Service\ExtensionsService.class
